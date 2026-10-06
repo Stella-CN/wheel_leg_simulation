@@ -1,9 +1,24 @@
-# 髋部同轴双驱动轮腿：MuJoCo 台架与落地自平衡
+# wheel_leg_simulation — 轮腿机器人 MuJoCo 仿真
+
+本仓库用于髋部同轴双驱动轮腿机器人的机构建模与控制验证，包含单腿/双腿台架、自由基座自平衡、同步屈伸、自扶正、跳跃落地和原地转向场景。主要技术栈为 Python 3.12、MuJoCo 3.2.7、NumPy、SciPy 和 Matplotlib。
+
+## 快速开始
+
+```bash
+git clone https://github.com/Stella-CN/wheel_leg_simulation.git
+cd wheel_leg_simulation
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python -m wheel_leg.simulate_balance --headless --config configs/simulations/balance.json
+```
+
+macOS 图形预览使用 `.venv/bin/mjpython -m wheel_leg.simulate_balance --config configs/simulations/balance.json`。运行日志和图表保存在 `results/`；已有结果是历史验证记录，重新运行可能覆盖对应场景输出。虚拟环境不随仓库提交，克隆后需要安装依赖。
 
 ## 工程边界
 
 本目录只维护 MuJoCo 建模、控制、仿真配置、测试与结果。完整机器人硬件工程已迁至
-[wheel_leg_hardware](../wheel_leg_hardware/README.md)，包括机械/电气结构、制造文件、BOM、打印试装包和历版资料。
+[wheel_leg_hardware](https://github.com/Stella-CN/wheel_leg_hardware)，包括机械/电气结构、制造文件、BOM、打印试装包和历版资料。
 仿真运行不依赖硬件目录；下文尺寸、质量、惯量和执行器参数是仿真模型的独立参数快照，不自动跟随硬件 V8.3 更新，也不能视为制造依据。
 
 ## 当前仿真布局：髋内置、膝外置
@@ -39,7 +54,7 @@ configs/simulations/spin_extension.json # 原地转向与同步伸缩腿
 ## 自平衡下双腿同步屈伸
 
 ```bash
-cd /Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco
+# 在 wheel_leg_simulation 仓库根目录执行
 .venv/bin/mjpython -m wheel_leg.simulate_balance --config configs/simulations/leg_extension.json
 ```
 
@@ -68,7 +83,7 @@ cd /Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco
 该专项先保持站立平衡，再以五次曲线在 `3 秒` 内将机身航向转过 `90°`；转向期间腿长按 `183.85±10 mm` 周期变化，转向结束后继续保持 3 秒平衡。航向由左右轮毂电机的差动控制产生，机身前向位置/速度补偿使用轮毂共模力矩，未对机身施加外力或直接改写位姿。
 
 ```bash
-cd /Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco
+# 在 wheel_leg_simulation 仓库根目录执行
 
 # GUI
 .venv/bin/mjpython -m wheel_leg.simulate_spin_extension \
@@ -89,7 +104,7 @@ cd /Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco
 跳跃专项先用站立 LQR 稳定机身，再切换到约 `145 mm` 下蹲目标；随后双侧膝电机施加对称 `4.5 N·m` 蹬地脉冲，轮胎离地后六个电机释放，检测到双轮重新接地后恢复站立 LQR。只有轮地接触产生外力，没有直接对机身施加向上外力。
 
 ```bash
-cd /Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco
+# 在 wheel_leg_simulation 仓库根目录执行
 
 # GUI
 .venv/bin/mjpython -m wheel_leg.simulate_jump \
@@ -107,7 +122,7 @@ cd /Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco
 使用 `--startup self-right` 时，模型先以俯卧姿态放在地板上，前 `1 s` 不输出任何电机力矩；随后双侧膝电机以五次曲线渐增到 `+7 N·m`，通过腿部接触使机身回到接近直立姿态。检测到机身俯仰角小于 15°、俯仰角速度小于 3 rad/s 后，自动切换到原有全状态 LQR 平衡控制。自扶正超时后仍会切换控制器，但报告中的 `self_righting_passed` 为 false。
 
 ```bash
-cd /Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco
+# 在 wheel_leg_simulation 仓库根目录执行
 .venv/bin/mjpython -m wheel_leg.simulate_balance --config configs/simulations/self_righting.json
 .venv/bin/python -m wheel_leg.simulate_balance --headless --config configs/simulations/self_righting.json
 ```
@@ -117,7 +132,7 @@ cd /Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco
 ## 落地自平衡（当前整机入口）
 
 ```bash
-cd /Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco
+# 在 wheel_leg_simulation 仓库根目录执行
 .venv/bin/python -m wheel_leg.build_ground_model
 .venv/bin/mjpython -m wheel_leg.simulate_balance --config configs/simulations/balance.json
 ```
@@ -196,7 +211,7 @@ brew install python@3.12
 解压本目录后，在 macOS 本地终端执行，不要在 Remote SSH 终端中运行图形窗口：
 
 ```bash
-cd wheel_leg_mujoco
+cd wheel_leg_simulation
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
@@ -210,12 +225,7 @@ Apple Silicon 应使用原生 arm64 Python，不要在 Rosetta x86_64 环境下�
 
 ## 电机资料与仿真映射
 
-资料源目录：
-
-```text
-/Users/lvjiaqing/MyProjects/MyRobot/references/DM-J4310-2EC
-/Users/lvjiaqing/MyProjects/MyRobot/references/DM-H6215
-```
+资料来源：[DM-J4310-2EC](https://gitee.com/kit-miao/DM-J4310-2EC) 与 [DM-H6215](https://gitee.com/kit-miao/DM-H6215)。硬件仓库通过子模块固定资料版本；仿真使用已保存的参数，不需要克隆这些资料。
 
 当前工程使用 `motor_specs.py` 保存资料参数，并由 `build_model.py` 写入 MJCF 外形、质量分配和髋/膝驱动限幅。
 
@@ -249,7 +259,7 @@ OA 通过同轴黄色输出轴连接膝转子；OB 的可见根部通过偏置�
 ## 文件
 
 ```text
-wheel_leg_mujoco/
+wheel_leg_simulation/
 ├── README.md
 ├── requirements.txt
 ├── wheel_leg/                 # 可复用建模、控制和仿真入口
