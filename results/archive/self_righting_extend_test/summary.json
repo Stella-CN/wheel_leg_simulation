@@ -1,0 +1,91 @@
+{
+  "status": "completed",
+  "balanced": true,
+  "model": "/Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco/ground_robot.xml",
+  "mass_parameters": "engineering_estimates_not_measured",
+  "controller": "self-righting knee torque sequence + length-scheduled LQR + loaded equilibrium and reference velocity",
+  "state_feedback": "ideal MuJoCo state; no sensor noise or delay",
+  "base_free_dof": 6,
+  "gravity_m_s2": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "total_mass_kg": 4.342631420021174,
+  "duration_s": 16.000999999996573,
+  "drop_height_m": 0.01,
+  "initial_pitch_deg": 90.0,
+  "initial_roll_deg": 0,
+  "push_n": 0.0,
+  "push_start_s": 5,
+  "push_duration_s": 0.2,
+  "feedback_enabled": true,
+  "first_contact_s": 0.08400000000000006,
+  "max_pitch_deg": 90.0,
+  "max_roll_deg": 179.99999999999991,
+  "final_pitch_deg": 0.00209901386885257,
+  "final_roll_deg": -2.290664285588327e-11,
+  "final_x_m": -0.0001254893776442393,
+  "final_vx_m_s": 5.372984439935194e-06,
+  "final_height_m": 0.2094920598535879,
+  "tail_mean_floor_normal_n": 42.60300358163063,
+  "tail_both_wheels_contact_fraction": 1.0,
+  "max_closure_mm": 0.9833069299552575,
+  "max_nonwheel_ground_contacts": 0,
+  "max_startup_nonwheel_ground_contacts": 10,
+  "equilibrium_acceleration_residual": 2.3574851274370315e-10,
+  "peak_torques_nm": {
+    "hip_motor_left": 1.1794889631249592,
+    "knee_motor_left": 7.0,
+    "wheel_motor_left": 2.0,
+    "hip_motor_right": 1.1794889734561138,
+    "knee_motor_right": 7.0,
+    "wheel_motor_right": 2.0
+  },
+  "saturation_fractions": [
+    0.0,
+    0.05649646897068933,
+    0.004124742203612274,
+    0.0,
+    0.05649646897068933,
+    0.004124742203612274
+  ],
+  "above_rated_torque_fractions": [
+    0.0,
+    0.058058871320542466,
+    0.004312230485594651,
+    0.0,
+    0.058058871320542466,
+    0.004312230485594651
+  ],
+  "mujoco_warnings": {},
+  "motion": "extend",
+  "startup": "self-right",
+  "self_righting_passed": true,
+  "lying_pitch_deg": 90.0,
+  "laying_idle_s": 1.0,
+  "righting_timeout_s": 4.0,
+  "righting_transition_s": 1.903999999999901,
+  "righting_phase": "balance",
+  "righting_success": true,
+  "motion_passed": true,
+  "leg_amplitude_mm": 30.0,
+  "leg_period_s": 8,
+  "motion_start_s": 2.9039999999999013,
+  "complete_cycle_tested": true,
+  "leg_length_range_m": {
+    "left": [
+      0.15286628476201908,
+      0.21331503437882102
+    ],
+    "right": [
+      0.15286628476208575,
+      0.21331503437882904
+    ]
+  },
+  "max_leg_tracking_error_mm": 0.9832768811035841,
+  "rms_leg_tracking_error_mm": 0.7323901532350553,
+  "motion_max_pitch_deg": 0.12009412862240776,
+  "motion_max_roll_deg": 5.583731922005784e-10,
+  "motion_both_wheels_contact_fraction": 1.0
+}

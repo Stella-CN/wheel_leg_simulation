@@ -1,0 +1,88 @@
+{
+  "status": "completed",
+  "balanced": true,
+  "model": "/Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco/models/generated/ground_robot.xml",
+  "scenario_config": "/Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco/configs/simulations/leg_extension.json",
+  "mass_parameters": "engineering_estimates_not_measured",
+  "controller": "length-scheduled LQR + loaded equilibrium and reference velocity",
+  "state_feedback": "ideal MuJoCo state; no sensor noise or delay",
+  "base_free_dof": 6,
+  "gravity_m_s2": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "total_mass_kg": 4.342631420021174,
+  "duration_s": 60.000999999950864,
+  "drop_height_m": 0.01,
+  "initial_pitch_deg": 3.0,
+  "initial_roll_deg": 2.0,
+  "push_n": -5.0,
+  "push_start_s": 7.0,
+  "push_duration_s": 0.2,
+  "feedback_enabled": true,
+  "first_contact_s": 0.04100000000000003,
+  "max_pitch_deg": 3.0000000000000004,
+  "max_roll_deg": 2.0,
+  "max_tilt_deg": 3.605044191944706,
+  "final_pitch_deg": 0.0032559495332601966,
+  "final_roll_deg": 1.959373011579238e-12,
+  "final_tilt_deg": 0.0032559498390042183,
+  "final_x_m": 0.00026499215835027514,
+  "final_vx_m_s": -0.0006268145430681885,
+  "final_height_m": 0.2325901932327926,
+  "tail_mean_floor_normal_n": 42.463246964064496,
+  "tail_both_wheels_contact_fraction": 1.0,
+  "max_closure_mm": 0.510329014262991,
+  "max_nonwheel_ground_contacts": 0,
+  "max_startup_nonwheel_ground_contacts": 0,
+  "equilibrium_acceleration_residual": 2.3574851274370315e-10,
+  "peak_torques_nm": {
+    "hip_motor_left": 0.5838484843448973,
+    "knee_motor_left": 3.593331229097927,
+    "wheel_motor_left": 0.6792300689502686,
+    "hip_motor_right": 1.069218859244498,
+    "knee_motor_right": 3.5058904448080046,
+    "wheel_motor_right": 1.0018806431271172
+  },
+  "saturation_fractions": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "above_rated_torque_fractions": [
+    0.0,
+    0.00034999416676388727,
+    0.0,
+    0.0,
+    0.0001999966667222213,
+    1.666638889351844e-05
+  ],
+  "mujoco_warnings": {},
+  "motion": "extend",
+  "startup": "balance",
+  "self_righting_passed": true,
+  "motion_passed": true,
+  "leg_amplitude_mm": 30.0,
+  "leg_period_s": 4.0,
+  "motion_start_s": 2.0,
+  "complete_cycle_tested": true,
+  "leg_length_range_m": {
+    "left": [
+      0.15274805859690715,
+      0.21337952067011817
+    ],
+    "right": [
+      0.15274805859729315,
+      0.21337952067038976
+    ]
+  },
+  "max_leg_tracking_error_mm": 1.6475366813973047,
+  "rms_leg_tracking_error_mm": 0.7645917122149711,
+  "motion_max_pitch_deg": 0.5188252450809016,
+  "motion_max_roll_deg": 4.637132425571178e-05,
+  "motion_both_wheels_contact_fraction": 1.0
+}

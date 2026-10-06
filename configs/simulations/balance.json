@@ -1,0 +1,16 @@
+{
+  "name": "balance",
+  "model": "models/generated/ground_robot.xml",
+  "output": "results/current/balance",
+  "headless": false,
+  "duration": 30.0,
+  "drop_height": 0.01,
+  "pitch_deg": 3.0,
+  "roll_deg": 0.0,
+  "push_n": 3.0,
+  "push_start": 5.0,
+  "push_duration": 0.2,
+  "startup": "balance",
+  "motion": "hold",
+  "disable_feedback": false
+}

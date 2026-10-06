@@ -1,0 +1,279 @@
+{
+  "python_version": "3.12.14",
+  "python_architecture": "arm64",
+  "mujoco_version": "3.2.7",
+  "python_syntax_checked": true,
+  "xml_well_formed": true,
+  "geometry_grid_configurations": 1681,
+  "geometry_max_closure_m": 1.688e-16,
+  "geometry_max_wheel_position_error_m": 1.153e-16,
+  "initial_body_euler_and_joint_ref_checked": true,
+  "unittest_count": 21,
+  "unittest_passed": 21,
+  "mujoco_model_compilation_executed": true,
+  "cad_meshes_loaded": false,
+  "mujoco_dynamics_executed": true,
+  "biped_model_compilation_executed": true,
+  "project_layout": {
+    "source_package": "wheel_leg",
+    "tools": "tools",
+    "tests": "tests",
+    "model_configs": "configs/model",
+    "simulation_configs": [
+      "configs/simulations/balance.json",
+      "configs/simulations/leg_extension.json",
+      "configs/simulations/self_righting.json",
+      "configs/simulations/jump.json",
+      "configs/simulations/spin_extension.json"
+    ],
+    "generated_models": "models/generated",
+    "reports": "reports",
+    "current_results": "results/current",
+    "archived_results": "results/archive"
+  },
+  "biped_chassis_geometry_m": [
+    0.2,
+    0.15,
+    0.1
+  ],
+  "biped_hip_axis_offset_m": 0.075,
+  "biped_model_shape": {
+    "nq": 10,
+    "nv": 10,
+    "nu": 6,
+    "neq": 2,
+    "independent_dof": 6
+  },
+  "biped_geometry_grid_configurations": 441,
+  "biped_max_closure_m": 1.241e-16,
+  "biped_max_wheel_position_error_m": 1.115e-16,
+  "biped_modeled_mechanism_mass_kg": 3.554072072072072,
+  "biped_dynamics_results": [
+    "results/current/balance/summary.json"
+  ],
+  "macos_viewer_executed": false,
+  "default_modeled_mechanism_mass_kg": 1.777036036036036,
+  "mechanism_geometry_m": {
+    "OB": 0.13,
+    "AC": 0.13,
+    "BW": 0.13,
+    "OA": 0.035,
+    "BC": 0.035,
+    "wheel_radius": 0.05
+  },
+  "topology": {
+    "hip_and_knee_coaxial": true,
+    "hip_stator_fixed": true,
+    "hip_rotor_drives_knee_stator_via_flange": true,
+    "linkage_attached_to_knee_motor": true,
+    "active_arm": "OA driven by knee_drive",
+    "fixed_arm": "OB attached to knee_motor stator",
+    "passive_bearings": [
+      "A",
+      "B",
+      "C"
+    ],
+    "rigid_output_link": "BC and BW are one body"
+  },
+  "motor_models": {
+    "hip": "DM-J4310-2EC V1.1",
+    "knee": "DM-J4310-2EC V1.1",
+    "wheel": "DM-H6215"
+  },
+  "motor_reference_geometry": {
+    "DM-J4310-2EC V1.1": {
+      "outer_diameter_m": 0.057,
+      "body_length_m": 0.046,
+      "mass_kg": 0.3,
+      "rated_torque_nm": 3,
+      "peak_torque_nm": 7
+    },
+    "DM-H6215": {
+      "outer_diameter_m": 0.068,
+      "body_length_m": 0.0445,
+      "mass_kg": 0.36,
+      "mass_source": "user supplied",
+      "rated_torque_nm": 1,
+      "peak_torque_nm": 2,
+      "torque_source": "user supplied"
+    }
+  },
+  "current_dynamics_results": [
+    "results/current/balance/summary.json",
+    "results/current/leg_extension/summary.json",
+    "results/current/self_righting/summary.json",
+    "results/current/jump/summary.json",
+    "results/current/spin_extension/summary.json"
+  ],
+  "reason": "Hip motors moved inside chassis; adopted OB=AC=BW=130 mm mild shortening with OA=BC=35 mm, scaled unmeasured link-mass estimates for unchanged cross-sections, recomputed payload inertia and controller gains, reorganized source/config/model/report/result paths, and passed 21 tests, 30-second hold/60-second extension, unpowered self-righting, motor-driven jump/landing, and 90-degree in-place yaw with synchronized leg extension runs. Prior result sections are historical.",
+  "next_steps": [
+    "Replace material, mass, center-of-mass and rotor inertia estimates with measured values.",
+    "Add sensor estimation, communication delay and measured motor torque/speed/thermal limits before hardware transfer."
+  ],
+  "motor_visuals": "Concentric procedural cylinders; outer shells have front-half annular bores, embedded vertex data only; no external CAD",
+  "mount_blocks_removed": true,
+  "chassis_dimensions_unit_confirmed": "cm",
+  "offscreen_render_executed": true,
+  "ground_balance": {
+    "date": "2026-09-20",
+    "model": "models/generated/ground_robot.xml",
+    "mass_parameters": "configs/model/physical_parameters.json",
+    "mass_report": "reports/MASS_REPORT.json",
+    "parameters_status": "engineering_estimates_not_measured",
+    "total_mass_kg": 4.342631420021174,
+    "chassis_including_payload_kg": 1.2827328,
+    "model_shape": {
+      "nq": 17,
+      "nv": 16,
+      "nu": 6,
+      "neq": 2,
+      "base_free_dof": 6,
+      "nmesh": 2
+    },
+    "control": "Static equilibrium + full-state discrete LQR, ideal simulated state, motor torques only",
+    "positive_results": [
+      "results/current/balance/summary.json"
+    ],
+    "expected_failure_result": "results/archive/balance_no_feedback/summary.json",
+    "longest_test_s": 60,
+    "largest_tested_drop_m": 0.03,
+    "largest_tested_pitch_deg": 5,
+    "largest_tested_roll_deg": 2,
+    "largest_tested_push_n": 5,
+    "push_duration_s": 0.2,
+    "max_closure_mm": 0.511,
+    "peak_actuator_saturation_observed": false,
+    "mujoco_warnings_observed": false,
+    "ground_render": "results/current/overview.png",
+    "plot": "results/current/balance/balance.png",
+    "limitations": [
+      "No measured link/motor inertias or payload COM.",
+      "No motor thermal/speed envelope, actuator delay or sensor noise.",
+      "Local flat-ground balancing, not arbitrary terrain or recovery from a fall."
+    ]
+  },
+  "balanced_extension": {
+    "mode": "extend",
+    "controller": "9 loaded equilibria, interpolated LQR gains and support torques, smooth position/velocity reference",
+    "nominal_length_m": 0.18384776310850237,
+    "amplitude_m": 0.03,
+    "default_period_s": 8,
+    "start_s": 2,
+    "ramp_s": 2,
+    "positive_results": [
+      "results/current/leg_extension/summary.json"
+    ],
+    "duration_s": [60],
+    "periods_tested_s": [
+      8,
+      4
+    ],
+    "max_leg_tracking_errors_mm": [1.6475366813973047],
+    "max_motion_pitch_deg": [0.5188252450809016],
+    "both_wheels_remained_in_contact": true,
+    "actuator_peak_saturation": false,
+    "mujoco_warnings": false,
+    "plot": "results/current/leg_extension/leg_extension.png"
+  },
+  "self_righting": {
+    "startup": "self-right",
+    "lying_pitch_deg": 90,
+    "unpowered_idle_s": 1,
+    "righting_knee_torque_nm": 7,
+    "righting_transition_s": 1.976,
+    "max_tilt_deg": 90.2102,
+    "max_startup_nonwheel_ground_contacts": 8,
+    "post_startup_nonwheel_ground_contacts": 0,
+    "balanced": true,
+    "mujoco_warnings": false,
+    "result": "results/current/self_righting/summary.json",
+    "limitations": [
+      "Known initial face-down pose and ideal MuJoCo state feedback.",
+      "No sensor delay, noise, motor thermal limit or arbitrary fall-pose search."
+    ]
+  },
+  "jump": {
+    "config": "configs/simulations/jump.json",
+    "result": "results/current/jump/summary.json",
+    "jump_passed": true,
+    "balanced_after_landing": true,
+    "squat_length_mm": 145.0,
+    "thrust_torque_nm": 4.5,
+    "initial_height_m": 0.24198122004748188,
+    "max_height_m": 0.34857173002736774,
+    "jump_height_m": 0.10659050997988587,
+    "takeoff_time_s": 2.113999999999878,
+    "landing_time_s": 2.352999999999852,
+    "flight_duration_s": 0.23899999999997368,
+    "max_pitch_deg": 15.697791142341506,
+    "max_closure_mm": 0.679640873993922,
+    "max_flight_nonwheel_ground_contacts": 0,
+    "max_knee_limit_excess_rad": 0.001231066034608208,
+    "mujoco_warnings": {},
+    "limitations": [
+      "Conservative single-hop profile with ideal MuJoCo state feedback.",
+      "No measured impact compliance, motor speed/current loop, thermal limit or structural strength validation."
+    ]
+  },
+  "spin_extension": {
+    "config": "configs/simulations/spin_extension.json",
+    "result": "results/current/spin_extension/summary.json",
+    "plot": "results/current/spin_extension/spin_extension.png",
+    "spin_extension_passed": true,
+    "spin_passed": true,
+    "extension_passed": true,
+    "balanced_after_turn": true,
+    "target_yaw_deg": 90.0,
+    "spin_duration_s": 3.0,
+    "spin_end_yaw_deg": 88.82475945393155,
+    "yaw_error_at_spin_end_deg": -1.1752405460684516,
+    "actual_turns": 0.24673544292758764,
+    "max_yaw_rate_deg_s": 58.17906674935995,
+    "max_planar_displacement_mm": 64.12902508046791,
+    "max_pitch_deg": 3.0000000000000004,
+    "max_roll_deg": 0.47791930864211907,
+    "max_closure_mm": 0.4927634766511409,
+    "target_leg_range_mm": 20.000000000000018,
+    "max_leg_tracking_error_mm": 3.027719280194158,
+    "max_nonwheel_ground_contacts": 0,
+    "mujoco_warnings": {},
+    "limitations": [
+      "3-second high-speed 90-degree turn baseline with ideal MuJoCo state feedback and estimated tire friction.",
+      "Target sweeps above 120 degrees showed excessive drift or failure; full 360-degree rotation is not a passing profile yet.",
+      "No measured tire slip, motor thermal/current loop, sensor delay or structural strength validation."
+    ]
+  },
+  "concentric_motor_checks": {
+    "inner_outer_radius_ratio": 0.5,
+    "inner_outer_height_ratio": 0.5,
+    "outboard_faces_flush": true,
+    "left_right_mirroring_checked": true,
+    "hip_knee_inner_rotor": true,
+    "hub_outer_rotor": true,
+    "OA_rigid_to_knee_rotor": true,
+    "OB_rigid_to_knee_stator": true,
+    "visual_OB_offset_bracket": true,
+    "mass_inertia_policy": "retained previous equivalent inertial geometry estimates",
+    "render": "results/archive/concentric_motors.png"
+  },
+  "internal_hip_layout": {
+    "hip_stators_rigid_inside_chassis": true,
+    "hip_motor_center_abs_y_m": 0.05,
+    "knee_motor_center_abs_y_m": 0.1,
+    "hip_motor_axial_bounds_abs_y_m": [
+      0.027,
+      0.073
+    ],
+    "wheel_track_m": 0.274,
+    "previous_wheel_track_m": 0.37,
+    "inward_translation_per_side_m": 0.048,
+    "payload_width_estimate_m": 0.05,
+    "payload_envelope_clearance_per_side_m": 0.002,
+    "total_mass_kg": 4.342631420021174,
+    "results": [
+      "results/current/balance/summary.json",
+      "results/current/leg_extension/summary.json"
+    ],
+    "render": "results/archive/internal_hip.png"
+  }
+}

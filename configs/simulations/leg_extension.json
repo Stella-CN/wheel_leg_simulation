@@ -1,0 +1,19 @@
+{
+  "name": "leg_extension",
+  "model": "models/generated/ground_robot.xml",
+  "output": "results/current/leg_extension",
+  "headless": false,
+  "duration": 60.0,
+  "drop_height": 0.01,
+  "pitch_deg": 3.0,
+  "roll_deg": 2.0,
+  "push_n": -5.0,
+  "push_start": 7.0,
+  "push_duration": 0.2,
+  "startup": "balance",
+  "motion": "extend",
+  "leg_amplitude_mm": 30.0,
+  "leg_period": 4.0,
+  "motion_start": 2.0,
+  "disable_feedback": false
+}

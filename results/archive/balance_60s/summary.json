@@ -1,0 +1,61 @@
+{
+  "status": "completed",
+  "balanced": true,
+  "model": "/Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco/ground_robot.xml",
+  "mass_parameters": "engineering_estimates_not_measured",
+  "controller": "full-state discrete LQR + static motor feedforward",
+  "state_feedback": "ideal MuJoCo state; no sensor noise or delay",
+  "base_free_dof": 6,
+  "gravity_m_s2": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "total_mass_kg": 4.410913936346947,
+  "duration_s": 60.000999999950864,
+  "drop_height_m": 0.01,
+  "initial_pitch_deg": 3,
+  "initial_roll_deg": 0,
+  "push_n": 3,
+  "push_start_s": 5,
+  "push_duration_s": 0.2,
+  "feedback_enabled": true,
+  "first_contact_s": 0.03800000000000003,
+  "max_pitch_deg": 3.0000000000000004,
+  "max_roll_deg": 4.121421141018472e-10,
+  "final_pitch_deg": 3.940489158682612e-11,
+  "final_roll_deg": -1.632287271395077e-10,
+  "final_x_m": 3.270089755937212e-11,
+  "final_vx_m_s": -8.509808716987156e-18,
+  "final_height_m": 0.26055537007949225,
+  "tail_mean_floor_normal_n": 43.27106571556356,
+  "tail_both_wheels_contact_fraction": 1.0,
+  "max_closure_mm": 0.48183779631428114,
+  "max_nonwheel_ground_contacts": 0,
+  "equilibrium_acceleration_residual": 4.1013824793634884e-11,
+  "peak_torques_nm": {
+    "hip_motor_left": 0.6054003372679818,
+    "knee_motor_left": 3.3463436343253083,
+    "wheel_motor_left": 0.8609276704200854,
+    "hip_motor_right": 0.6054003356406382,
+    "knee_motor_right": 3.3463436343235227,
+    "wheel_motor_right": 0.860927666541478
+  },
+  "saturation_fractions": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "above_rated_torque_fractions": [
+    0.0,
+    0.00018333027782870286,
+    0.0,
+    0.0,
+    0.00018333027782870286,
+    0.0
+  ],
+  "mujoco_warnings": {}
+}

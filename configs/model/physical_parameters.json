@@ -1,0 +1,22 @@
+{
+  "status": "engineering_estimates_not_measured",
+  "aluminium_density_kg_m3": 2700.0,
+  "rubber_density_kg_m3": 1100.0,
+  "chassis_wall_thickness_m": 0.002,
+  "battery_mass_kg": 0.45,
+  "electronics_mass_kg": 0.15,
+  "battery_center_z_m": -0.02,
+  "electronics_center_z_m": 0.015,
+  "battery_dimensions_m": [0.10, 0.05, 0.035],
+  "electronics_dimensions_m": [0.10, 0.05, 0.015],
+  "rubber_friction": 0.8,
+  "tire_inner_radius_m": 0.043,
+  "rim_inner_radius_m": 0.034,
+  "notes": {
+    "chassis": "Closed 200x150x100 mm aluminium shell, assumed 2 mm wall. Battery/electronics dimensions and positions are estimates.",
+    "links": "Solid aluminium capsules/cylinders matching existing equivalent link geometry; actual holes, bearings and fasteners are not individually measured.",
+    "tire": "Rubber annulus, assumed density 1100 kg/m3 and dry rigid-floor sliding friction 0.8; these are not material measurements.",
+    "motors": "Hip/knee 0.300 kg each, hub 0.360 kg, retained from confirmed inputs; rotor/stator split 50/50 and equivalent inertias remain estimates.",
+    "aluminium_source": "https://www.hydro.com/globalassets/01-products--services/extruded-profiles/americas/ena-resources/alloy-data-sheets/hydro_2019_data_sheet_6061.pdf"
+  }
+}

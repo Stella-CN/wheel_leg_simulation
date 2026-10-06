@@ -1,0 +1,82 @@
+{
+  "status": "completed",
+  "balanced": true,
+  "model": "/Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco/ground_robot.xml",
+  "mass_parameters": "engineering_estimates_not_measured",
+  "controller": "length-scheduled LQR + loaded equilibrium and reference velocity",
+  "state_feedback": "ideal MuJoCo state; no sensor noise or delay",
+  "base_free_dof": 6,
+  "gravity_m_s2": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "total_mass_kg": 4.410913936346947,
+  "duration_s": 60.000999999950864,
+  "drop_height_m": 0.01,
+  "initial_pitch_deg": 3,
+  "initial_roll_deg": 2.0,
+  "push_n": -5.0,
+  "push_start_s": 7.0,
+  "push_duration_s": 0.2,
+  "feedback_enabled": true,
+  "first_contact_s": 0.04000000000000003,
+  "max_pitch_deg": 3.0000000000000004,
+  "max_roll_deg": 2.0,
+  "final_pitch_deg": 0.0031421083817150283,
+  "final_roll_deg": -6.136621720127649e-11,
+  "final_x_m": 0.00024846173020728234,
+  "final_vx_m_s": -0.0005590854448708478,
+  "final_height_m": 0.2605790213214691,
+  "tail_mean_floor_normal_n": 43.131326257532905,
+  "tail_both_wheels_contact_fraction": 1.0,
+  "max_closure_mm": 0.525698084836965,
+  "max_nonwheel_ground_contacts": 0,
+  "equilibrium_acceleration_residual": 1.3048281311159278e-10,
+  "peak_torques_nm": {
+    "hip_motor_left": 0.718921821020557,
+    "knee_motor_left": 3.5859446941105295,
+    "wheel_motor_left": 0.720168279517026,
+    "hip_motor_right": 1.2087889959396936,
+    "knee_motor_right": 3.920872319870174,
+    "wheel_motor_right": 1.1652887459450227
+  },
+  "saturation_fractions": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "above_rated_torque_fractions": [
+    0.0,
+    0.00041665972233796103,
+    0.0,
+    0.0,
+    0.00029999500008333195,
+    1.666638889351844e-05
+  ],
+  "mujoco_warnings": {},
+  "motion": "extend",
+  "motion_passed": true,
+  "leg_amplitude_mm": 30.0,
+  "leg_period_s": 4.0,
+  "motion_start_s": 2,
+  "complete_cycle_tested": true,
+  "leg_length_range_m": {
+    "left": [
+      0.1808160232396827,
+      0.24161688183591923
+    ],
+    "right": [
+      0.18081602323923152,
+      0.2416168818329506
+    ]
+  },
+  "max_leg_tracking_error_mm": 1.8777072982581189,
+  "rms_leg_tracking_error_mm": 0.946624177277735,
+  "motion_max_pitch_deg": 0.5077115936778771,
+  "motion_max_roll_deg": 2.0388390547805567e-05,
+  "motion_both_wheels_contact_fraction": 1.0
+}

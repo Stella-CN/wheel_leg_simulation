@@ -1,0 +1,20 @@
+{
+  "name": "self_righting",
+  "model": "models/generated/ground_robot.xml",
+  "output": "results/current/self_righting",
+  "headless": false,
+  "duration": 10.0,
+  "drop_height": 0.0,
+  "pitch_deg": 0.0,
+  "roll_deg": 0.0,
+  "push_n": 0.0,
+  "push_start": 5.0,
+  "push_duration": 0.2,
+  "startup": "self-right",
+  "lying_pitch_deg": 90.0,
+  "laying_idle": 1.0,
+  "righting_timeout": 4.0,
+  "righting_torque": 7.0,
+  "motion": "hold",
+  "disable_feedback": false
+}

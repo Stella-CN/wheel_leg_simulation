@@ -1,0 +1,21 @@
+{
+  "name": "jump",
+  "model": "models/generated/ground_robot.xml",
+  "output": "results/current/jump",
+  "headless": false,
+  "duration": 6.0,
+  "drop_height": 0.01,
+  "pitch_deg": 3.0,
+  "roll_deg": 0.0,
+  "balance_duration": 1.0,
+  "squat_duration": 1.0,
+  "thrust_duration": 0.25,
+  "squat_length_mm": 145.0,
+  "thrust_torque": 4.5,
+  "hip_thrust_torque": 0.0,
+  "thrust_ramp": 0.02,
+  "contact_debounce": 0.03,
+  "landing_settle": 1.0,
+  "min_jump_height_mm": 80.0,
+  "max_flight_duration": 1.5
+}

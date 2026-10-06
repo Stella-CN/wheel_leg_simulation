@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "mujoco_version": "3.2.7",
+  "mode": "kinematic_preview",
+  "test": "extend",
+  "gravity": false,
+  "bias_compensation": false,
+  "base_fixed": true,
+  "ground_support_test": false,
+  "masses_are_placeholders": true,
+  "duration_s": 15.999999999996572,
+  "max_closure_mm": 1.688305753616065e-13,
+  "rms_wheel_error_mm": 5.136388703127242e-14,
+  "hip_peak_abs_nm": 0.0,
+  "hip_saturation_fraction": 0.0,
+  "crank_peak_abs_nm": 0.0,
+  "crank_saturation_fraction": 0.0,
+  "wheel_peak_abs_nm": 0.0,
+  "wheel_saturation_fraction": 0.0,
+  "mujoco_warnings": {}
+}

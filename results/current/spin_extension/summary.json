@@ -1,0 +1,79 @@
+{
+  "status": "completed",
+  "spin_extension_passed": true,
+  "spin_passed": true,
+  "extension_passed": true,
+  "balanced_after_turn": true,
+  "model": "/Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco/models/generated/ground_robot.xml",
+  "scenario_config": "/Users/lvjiaqing/MyProjects/MyRobot/wheel_leg_mujoco/configs/simulations/spin_extension.json",
+  "controller": "horizontal-position-weighted length-scheduled LQR + quintic yaw reference",
+  "state_feedback": "ideal MuJoCo state; no sensor noise or delay",
+  "total_mass_kg": 4.342631420021174,
+  "duration_s": 11.000999999999342,
+  "initial_height_m": 0.24198122004748188,
+  "target_yaw_deg": 90.0,
+  "spin_start_s": 3.0,
+  "spin_duration_s": 3.0,
+  "spin_end_yaw_deg": 88.82475945393155,
+  "yaw_error_at_spin_end_deg": -1.1752405460684516,
+  "actual_turns": 0.24673544292758764,
+  "max_yaw_error_deg": 5.522587192615063,
+  "max_yaw_rate_deg_s": 58.17906674935995,
+  "max_planar_displacement_mm": 64.12902508046791,
+  "max_pitch_deg": 3.0000000000000004,
+  "max_roll_deg": 0.47791930864211907,
+  "max_tilt_deg": 3.0000000000000444,
+  "max_closure_mm": 0.4927634766511409,
+  "max_nonwheel_ground_contacts": 0,
+  "leg_amplitude_mm": 10.0,
+  "leg_period_s": 6.0,
+  "motion_start_s": 2.0,
+  "target_leg_range_mm": 20.000000000000018,
+  "leg_length_range_m": {
+    "left": [
+      0.1723194302499703,
+      0.1936955817283234
+    ],
+    "right": [
+      0.17369083664437782,
+      0.1929931710188216
+    ]
+  },
+  "max_leg_tracking_error_mm": 3.027719280194158,
+  "complete_leg_cycle_tested": true,
+  "horizontal_position_weights": [
+    300.0,
+    0.0
+  ],
+  "horizontal_velocity_weights": [
+    10.0,
+    0.0
+  ],
+  "station_keeping_position_gain": 2.0,
+  "station_keeping_velocity_gain": 1.0,
+  "peak_torques_nm": {
+    "hip_motor_left": 0.5884472219564858,
+    "knee_motor_left": 3.356792851931304,
+    "wheel_motor_left": 0.8789277948662844,
+    "hip_motor_right": 0.588447220406181,
+    "knee_motor_right": 3.356792851406643,
+    "wheel_motor_right": 0.8789277930220218
+  },
+  "saturation_fractions": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "above_rated_torque_fractions": [
+    0.0,
+    0.000909008271975275,
+    0.0,
+    0.0,
+    0.000909008271975275,
+    0.0
+  ],
+  "mujoco_warnings": {}
+}
